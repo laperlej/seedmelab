@@ -27,7 +27,7 @@ cd ${DRUPAL_SITE_DIR}
 # Drupal shell for command line administration
 composer require drush/drush    
 # SeedMeLab ecosystem modules
-composer require drupal/foldershare drupal/foldershare_rest drupal/formatter_suite 
+composer require drupal/foldershare drupal/foldershare_rest drupal/formatter_suite drupal/chart_suite
 # Drupal contributed modules
 composer require drupal/admin_toolbar drupal/restui drupal/smtp drupal/structure_sync drupal/token 
 # Drupal contributed themes

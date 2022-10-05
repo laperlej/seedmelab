@@ -10,7 +10,7 @@ install_contrib_themes() {
 install_contrib_modules() {
   drush pm:enable token restui admin_toolbar admin_toolbar_tools structure_sync --yes
   drush pm:enable foldershare foldershare_rest --yes
-  #drush pm:enable formatter_suit chart_suite --yes
+  drush pm:enable formatter_suite chart_suite --yes
 
   # Set foldershare settings
   drush config:set foldershare.settings file_scheme private --yes
@@ -89,6 +89,8 @@ drush config:import --partial --source /var/www/sync --yes
 drush ib --choice safe
 drush im --choice safe
 drush pm:uninstall structure_sync --yes
+drush -y config-set system.performance css.preprocess 
+drush -y config-set system.performance js.preprocess 
 drush cache:rebuild
 # Toss installed menu and block
 rm /var/www/sync/structure_sync.data.yml
